@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sanmati Bangle Store</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:Poppins;
+background:#f8f6f4;
+color:#444;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 30px;
+background:white;
+box-shadow:0 2px 12px rgba(0,0,0,0.08);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-family:Playfair Display;
+font-size:26px;
+color:#a23b45;
+font-weight:600;
+}
+
+.header-right{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.order-btn{
+background:#a23b45;
+color:white;
+padding:8px 16px;
+border-radius:20px;
+text-decoration:none;
+font-size:14px;
+transition:0.3s;
+}
+
+.order-btn:hover{
+background:#872d35;
+}
+
+.menu{
+font-size:26px;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:80px 20px;
+background:linear-gradient(#f7ebe9,#f8f6f4);
+}
+
+.hero h1{
+font-family:Playfair Display;
+font-size:50px;
+color:#a23b45;
+}
+
+/* GALLERY */
+
+.gallery{
+padding:40px;
+text-align:center;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:10px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card img{
+width:100%;
+border-radius:8px;
+transition:.3s;
+}
+
+.card img:hover{
+transform:scale(1.07);
+}
+
+/* ORDER */
+
+.order{
+padding:40px;
+background:white;
+text-align:center;
+}
+
+form{
+max-width:420px;
+margin:auto;
+}
+
+input,textarea,select{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:1px solid #ddd;
+}
+
+button{
+background:#a23b45;
+color:white;
+border:none;
+padding:12px;
+width:100%;
+cursor:pointer;
+}
+
+/* CONTACT */
+
+.contact{
+padding:40px;
+text-align:center;
+background:#f2efec;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:40px;
+text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+background:#a23b45;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Sanmati Bangle Store</div>
+
+<div class="header-right">
+<a href="#orderSection" class="order-btn">Order Now</a>
+<div class="menu">☰</div>
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+<h1>Sanmati Bangle Store</h1>
+<p>Traditional and designer bangles for weddings and special occasions.</p>
+</section>
+
+<!-- GALLERY -->
+
+<section class="gallery">
+
+<h2>Our Bangles Collection</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="bangle1.jpeg">
+<h4>Design Kada</h4>
+<p>₹</p>
+</div>
+
+<div class="card">
+<img src="bangle2.jpeg">
+<h4>Plain Kada</h4>
+<p>₹</p>
+</div>
+
+<div class="card">
+<img src="bangle3.jpeg">
+<h4>Bridal Bangles</h4>
+<p>₹</p>
+</div>
+
+<div class="card">
+<img src="bangle4.jpeg">
+<h4>Benteks</h4>
+<p>₹</p>
+</div>
+
+<div class="card">
+<img src="bangle5.jpeg">
+<h4>Designer Bangles</h4>
+<p>₹</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ORDER -->
+
+<section class="order" id="orderSection">
+
+<h2>Custom Wedding / Anniversary Orders</h2>
+
+<form id="orderForm">
+
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="tel" id="phone" placeholder="Phone Number" required>
+
+<select id="event">
+<option>Wedding</option>
+<option>Anniversary</option>
+<option>Other</option>
+</select>
+
+<textarea id="message" placeholder="Design Details"></textarea>
+<textarea id="address" placeholder="Address"></textarea>
+
+<button type="submit">Send Order on WhatsApp</button>
+
+</form>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact">
+<h2>Contact Us</h2>
+<p><b>Phone:</b> 8652439926 / 8879705794 / 9373066102</p>
+<p><b>Service Areas:</b> Thane, Kalyan, Dombivli</p>
+</section>
+
+<footer>
+© 2026 Sanmati Bangle Store
+</footer>
+
+<a class="whatsapp" href="https://wa.me/918652439926">WhatsApp</a>
+
+<script>
+
+document.getElementById("orderForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let event=document.getElementById("event").value;
+let message=document.getElementById("message").value;
+let address=document.getElementById("address").value;
+
+let text=`Order Details
+Name: ${name}
+Phone: ${phone}
+Event: ${event}
+Message: ${message}
+Address: ${address}`;
+
+let url="https://wa.me/918652439926?text="+encodeURIComponent(text);
+
+window.open(url,"_blank");
+
+});
+
+</script>
+
+</body>
+</html>
